@@ -1,0 +1,7 @@
+node_modules/
+data/inbox.json
+uploads/
+.env
+.env.txt
+*.log
+.cache/
