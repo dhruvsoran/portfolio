@@ -29,7 +29,7 @@ vite.log
 
 # ─── Runtime data (regenerated on the server) ────────────────────────────
 server/data/
-server/uploads/achievements/_placeholder.svg
+
 server/cache/
 .cache/
 
