@@ -18,14 +18,23 @@ function usePhotoLoader() {
 function useTTSStatus() {
   const [enabled, setEnabled] = useState(false)
   const [checked, setChecked] = useState(false)
+  const [introScript, setIntroScript] = useState('')
   useEffect(() => {
     fetch('/api/tts-status')
       .then(r => r.json())
-      .then(d => setEnabled(d.enabled))
-      .catch(() => setEnabled(false))
+      .then(d => {
+        setIntroScript(d.introScript || '')
+        // "enabled" if at least one server TTS works, OR the browser can do TTS.
+        const browserTTS = typeof window !== 'undefined' && 'speechSynthesis' in window
+        setEnabled(!!(d.openaiConfigured || d.elevenLabsConfigured) || browserTTS)
+      })
+      .catch(() => {
+        const browserTTS = typeof window !== 'undefined' && 'speechSynthesis' in window
+        setEnabled(browserTTS)
+      })
       .finally(() => setChecked(true))
   }, [])
-  return { enabled, checked }
+  return { enabled, checked, introScript }
 }
 
 function useAudioAnalyser(audioRef, onLevel) {
@@ -127,7 +136,7 @@ function Waveform({ speaking, level }) {
 
 export default function AIAvatar() {
   const { hasPhoto, loaded, failed } = usePhotoLoader()
-  const { enabled: ttsEnabled, checked: ttsChecked } = useTTSStatus()
+  const { enabled: ttsEnabled, checked: ttsChecked, introScript } = useTTSStatus()
   const [speaking, setSpeaking] = useState(false)
   const [needsInteraction, setNeedsInteraction] = useState(true)
   const [hasStarted, setHasStarted] = useState(false)
@@ -135,6 +144,7 @@ export default function AIAvatar() {
   const [audioLevel, setAudioLevel] = useState(0)
   const [audioError, setAudioError] = useState(false)
   const audioRef = useRef(null)
+  const fallbackIntervalRef = useRef(null)
 
   const { start: startAnalyser, stop: stopAnalyser } = useAudioAnalyser(audioRef, setAudioLevel)
 
@@ -145,28 +155,88 @@ export default function AIAvatar() {
     }
   }, [])
 
+  const startBrowserFallback = useCallback(() => {
+    if (typeof window === 'undefined' || !window.speechSynthesis || !introScript) return
+    window.speechSynthesis.cancel()
+    const utterance = new SpeechSynthesisUtterance(introScript)
+    utterance.rate = 0.95
+    utterance.pitch = 1
+    utterance.volume = 1
+    // Try to pick a deeper / male voice for the intro
+    const voices = window.speechSynthesis.getVoices()
+    const preferred = voices.find(v => /male|deep|brian|onyx|daniel|alex/i.test(v.name))
+      || voices.find(v => v.lang?.startsWith('en'))
+    if (preferred) utterance.voice = preferred
+
+    utterance.onstart = () => {
+      setSpeaking(true)
+      setAudioError(false)
+      // Fake level for the mouth + waveform animation
+      fallbackIntervalRef.current = setInterval(() => {
+        setAudioLevel(0.25 + Math.random() * 0.5)
+      }, 90)
+    }
+    utterance.onend = () => {
+      setSpeaking(false)
+      setAudioLevel(0)
+      if (fallbackIntervalRef.current) {
+        clearInterval(fallbackIntervalRef.current)
+        fallbackIntervalRef.current = null
+      }
+    }
+    utterance.onerror = () => {
+      setSpeaking(false)
+      setAudioLevel(0)
+      setAudioError(true)
+      if (fallbackIntervalRef.current) {
+        clearInterval(fallbackIntervalRef.current)
+        fallbackIntervalRef.current = null
+      }
+    }
+    window.speechSynthesis.speak(utterance)
+  }, [introScript])
+
   const start = useCallback(() => {
-    if (!audioRef.current || !ttsEnabled) return
+    if (!ttsEnabled) return
     if (speaking) {
-      audioRef.current.pause()
-      audioRef.current.currentTime = 0
+      if (audioRef.current) {
+        audioRef.current.pause()
+        audioRef.current.currentTime = 0
+      }
+      window.speechSynthesis?.cancel()
+      if (fallbackIntervalRef.current) {
+        clearInterval(fallbackIntervalRef.current)
+        fallbackIntervalRef.current = null
+      }
+      stopAnalyser()
       setSpeaking(false)
       return
     }
-    audioRef.current.currentTime = 0
-    const playPromise = audioRef.current.play()
-    if (playPromise !== undefined) {
-      playPromise
-        .then(() => {
-          startAnalyser()
-          setSpeaking(true)
-        })
-        .catch(err => {
-          console.error('Playback failed:', err)
-          setAudioError(true)
-        })
+
+    // Stop any leftover speech
+    window.speechSynthesis?.cancel()
+
+    // If there's a real <audio> element wired up, try it first
+    if (audioRef.current) {
+      audioRef.current.currentTime = 0
+      const playPromise = audioRef.current.play()
+      if (playPromise !== undefined) {
+        playPromise
+          .then(() => {
+            startAnalyser()
+            setSpeaking(true)
+          })
+          .catch(() => {
+            // Server audio unavailable / 4xx / 5xx — fall back to browser TTS
+            startBrowserFallback()
+          })
+        return
+      }
     }
-  }, [speaking, ttsEnabled, startAnalyser])
+
+    // No <audio> element at all — go straight to browser TTS
+    startBrowserFallback()
+  }, [speaking, ttsEnabled, startAnalyser, stopAnalyser, startBrowserFallback])
 
   useEffect(() => {
     if (!ttsChecked || !ttsEnabled) return
@@ -196,7 +266,21 @@ export default function AIAvatar() {
     setSpeaking(false)
     setAudioError(true)
     stopAnalyser()
+    // Server audio failed to load (404/500) — kick off browser TTS as the fallback
+    startBrowserFallback()
   }
+
+  // Clean up fallback interval on unmount
+  useEffect(() => {
+    return () => {
+      if (fallbackIntervalRef.current) {
+        clearInterval(fallbackIntervalRef.current)
+      }
+      if (typeof window !== 'undefined' && window.speechSynthesis) {
+        window.speechSynthesis.cancel()
+      }
+    }
+  }, [])
 
   return (
     <div className="flex flex-col items-center w-full max-w-sm">
@@ -382,6 +466,7 @@ export default function AIAvatar() {
         <audio
           ref={audioRef}
           src="/api/intro-audio"
+          preload="none"
           onEnded={onAudioEnded}
           onError={onAudioError}
           onCanPlay={() => setAudioReady(true)}
