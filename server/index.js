@@ -397,6 +397,16 @@ app.get('/api/clear-tts-cache', (req, res) => {
   }
 });
 
+app.get('/robots.txt', (req, res) => {
+  res.type('text/plain');
+  res.sendFile(path.join(__dirname, '..', 'client', 'dist', 'robots.txt'));
+});
+
+app.get('/sitemap.xml', (req, res) => {
+  res.type('application/xml');
+  res.sendFile(path.join(__dirname, '..', 'client', 'dist', 'sitemap.xml'));
+});
+
 if (process.env.NODE_ENV === 'production') {
   app.use(express.static(path.join(__dirname, '..', 'client', 'dist')));
   app.get('*', (req, res) => {
