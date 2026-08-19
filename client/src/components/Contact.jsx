@@ -75,7 +75,7 @@ export default function Contact() {
           className="text-center mb-4"
         >
           <span className="section-label">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#00d4ff]" />
+            <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
             Contact
           </span>
         </motion.div>
@@ -114,14 +114,14 @@ export default function Contact() {
                   initial={{ opacity: 0, x: -20 }}
                   animate={inView ? { opacity: 1, x: 0 } : {}}
                   transition={{ duration: 0.4, delay: 0.25 + i * 0.06 }}
-                  className="card flex items-center gap-4 hover:border-[#00d4ff]/20 transition-all group"
+                  className="card flex items-center gap-4 hover:border-emerald-400/20 transition-all group"
                 >
-                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[#00d4ff]/10 to-[#7a5cff]/10 flex items-center justify-center text-xl group-hover:scale-110 transition-transform duration-300">
+                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-emerald-500/10 to-teal-400/10 flex items-center justify-center text-xl group-hover:scale-110 transition-transform duration-300">
                     {link.icon}
                   </div>
                   <div className="min-w-0">
                     <p className="text-xs text-app-muted font-medium">{link.label}</p>
-                    <p className="text-sm text-app-strong group-hover:text-[#00d4ff] transition-colors truncate">{link.value}</p>
+                    <p className="text-sm text-app-strong group-hover:text-emerald-400 transition-colors truncate">{link.value}</p>
                   </div>
                 </motion.a>
               ))}

@@ -58,8 +58,8 @@ export default function Navbar() {
             <div
               className="w-full text-center text-xs sm:text-sm py-2 px-4 relative"
               style={{
-                background: 'linear-gradient(90deg, rgba(0, 212, 255, 0.18), rgba(122, 92, 255, 0.18), rgba(255, 110, 199, 0.18))',
-                borderBottom: '1px solid rgba(0, 212, 255, 0.2)',
+                background: 'linear-gradient(90deg, rgba(16, 185, 129, 0.18), rgba(52, 211, 153, 0.18), rgba(245, 158, 11, 0.18))',
+                borderBottom: '1px solid rgba(16, 185, 129, 0.2)',
                 backdropFilter: 'blur(14px)',
               }}
             >
@@ -78,7 +78,7 @@ export default function Navbar() {
                 </span>
                 <a
                   href="#contact"
-                  className="ml-1 underline-offset-2 hover:underline text-[#00d4ff] font-semibold"
+                  className="ml-1 underline-offset-2 hover:underline text-emerald-400 font-semibold"
                 >
                   Let's talk →
                 </a>
@@ -126,7 +126,7 @@ export default function Navbar() {
                   href={link.href}
                   className={`relative px-4 py-2 text-sm rounded-xl transition-all duration-300 ${
                     activeSection === link.href.replace('#', '')
-                      ? 'text-[#00d4ff]'
+                      ? 'text-emerald-400'
                       : 'text-app-muted hover:text-app-strong'
                   }`}
                 >
@@ -135,8 +135,8 @@ export default function Navbar() {
                       layoutId="nav-active"
                       className="absolute inset-0 rounded-xl border"
                       style={{
-                        background: 'rgba(0, 212, 255, 0.08)',
-                        borderColor: 'rgba(0, 212, 255, 0.15)',
+                        background: 'rgba(16, 185, 129, 0.08)',
+                        borderColor: 'rgba(16, 185, 129, 0.15)',
                       }}
                       transition={{ type: 'spring', stiffness: 380, damping: 30 }}
                     />
@@ -159,7 +159,7 @@ export default function Navbar() {
                     d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                 </svg>
                 {unreadCount > 0 && (
-                  <span className="absolute top-1 right-1 min-w-[16px] h-4 px-1 rounded-full bg-[#00d4ff] text-[9px] font-bold text-black flex items-center justify-center">
+                  <span className="absolute top-1 right-1 min-w-[16px] h-4 px-1 rounded-full bg-emerald-400 text-[9px] font-bold text-black flex items-center justify-center">
                     {unreadCount > 9 ? '9+' : unreadCount}
                   </span>
                 )}
@@ -168,7 +168,7 @@ export default function Navbar() {
               <a
                 href="/resume.pdf"
                 download="Dhruv_Soran_Resume.pdf"
-                className="hidden sm:inline-flex items-center gap-2 px-4 py-2.5 text-sm rounded-full border border-[#00d4ff]/30 text-[#00d4ff] hover:bg-[#00d4ff]/10 transition-all duration-300"
+                className="hidden sm:inline-flex items-center gap-2 px-4 py-2.5 text-sm rounded-full border border-emerald-400/30 text-emerald-400 hover:bg-emerald-400/10 transition-all duration-300"
                 style={{ touchAction: 'manipulation' }}
               >
                 <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -215,26 +215,26 @@ export default function Navbar() {
                     transition={{ delay: i * 0.05 }}
                     className="block px-5 py-3.5 text-sm text-app-muted hover:text-app-strong rounded-2xl hover:bg-white/5 transition-all"
                   >
-                    <span className="text-[#00d4ff]/50 font-mono mr-3 text-xs">0{i + 1}</span>
+                    <span className="text-emerald-400/50 font-mono mr-3 text-xs">0{i + 1}</span>
                     {link.label}
                   </motion.a>
                 ))}
                 <a
                   href="/resume.pdf"
                   download="Dhruv_Soran_Resume.pdf"
-                  className="block px-5 py-3.5 text-sm text-[#00d4ff] rounded-2xl hover:bg-[#00d4ff]/5 transition-all"
+                  className="block px-5 py-3.5 text-sm text-emerald-400 rounded-2xl hover:bg-emerald-400/5 transition-all"
                 >
-                  <span className="text-[#00d4ff]/50 font-mono mr-3 text-xs">↓</span>
+                  <span className="text-emerald-400/50 font-mono mr-3 text-xs">↓</span>
                   Download Resume
                 </a>
                 <button
                   onClick={() => { openInbox(); setMobileOpen(false) }}
                   className="w-full text-left block px-5 py-3.5 text-sm text-app-strong rounded-2xl hover:bg-white/5 transition-all"
                 >
-                  <span className="text-[#00d4ff]/50 font-mono mr-3 text-xs">✉</span>
+                  <span className="text-emerald-400/50 font-mono mr-3 text-xs">✉</span>
                   Inbox
                   {unreadCount > 0 && (
-                    <span className="ml-2 text-[10px] font-mono text-[#00d4ff]">({unreadCount} new)</span>
+                    <span className="ml-2 text-[10px] font-mono text-emerald-400">({unreadCount} new)</span>
                   )}
                 </button>
               </div>

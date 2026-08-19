@@ -34,15 +34,15 @@ function KeyPrompt({ onSubmit }) {
       className="px-6 py-10 text-center"
     >
       <div className="w-14 h-14 rounded-2xl mx-auto mb-4 flex items-center justify-center"
-        style={{ background: 'linear-gradient(135deg, rgba(0,212,255,0.15), rgba(122,92,255,0.15))' }}>
-        <svg className="w-6 h-6 text-[#00d4ff]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        style={{ background: 'linear-gradient(135deg, rgba(16,185,129,0.15), rgba(52,211,153,0.15))' }}>
+        <svg className="w-6 h-6 text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
             d="M12 11c1.66 0 3-1.34 3-3S13.66 5 12 5 9 6.34 9 8s1.34 3 3 3zm0 2c-2.21 0-6 1.11-6 3.33V19h12v-2.67C18 14.11 14.21 13 12 13z" />
         </svg>
       </div>
       <h3 className="text-lg font-semibold text-app-strong mb-1">Inbox is locked</h3>
       <p className="text-sm text-app-muted mb-5 max-w-sm mx-auto">
-        Set <code className="font-mono text-[#00d4ff]">INBOX_KEY</code> on the server. Enter it here — it is stored only for this tab.
+        Set <code className="font-mono text-emerald-400">INBOX_KEY</code> on the server. Enter it here — it is stored only for this tab.
       </p>
       <div className="max-w-xs mx-auto flex gap-2">
         <input
@@ -76,14 +76,14 @@ function MessageCard({ m, onToggleRead, onDelete }) {
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: -8 }}
       className={`group relative rounded-2xl border p-4 sm:p-5 transition-all ${
-        m.read ? 'border-app' : 'border-[#00d4ff]/30'
+        m.read ? 'border-app' : 'border-emerald-400/30'
       }`}
-      style={m.read ? { background: 'color-mix(in srgb, var(--bg-soft) 40%, transparent)' } : { background: 'rgba(0, 212, 255, 0.04)' }}
+      style={m.read ? { background: 'color-mix(in srgb, var(--bg-soft) 40%, transparent)' } : { background: 'rgba(16, 185, 129, 0.04)' }}
     >
       {!m.read && (
         <span className="absolute top-3 right-3 flex h-2 w-2">
-          <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#00d4ff] opacity-75" />
-          <span className="relative inline-flex h-2 w-2 rounded-full bg-[#00d4ff]" />
+          <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
+          <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-400" />
         </span>
       )}
       <div className="flex items-start gap-3">
@@ -96,7 +96,7 @@ function MessageCard({ m, onToggleRead, onDelete }) {
         <div className="min-w-0 flex-1">
           <div className="flex items-baseline gap-2 flex-wrap">
             <p className="text-sm font-semibold text-app-strong truncate">{m.name}</p>
-            <a href={`mailto:${m.email}`} className="text-xs text-[#00d4ff] hover:underline truncate">
+            <a href={`mailto:${m.email}`} className="text-xs text-emerald-400 hover:underline truncate">
               {m.email}
             </a>
             <span className="text-[10px] text-app-muted ml-auto shrink-0 font-mono">{timeAgo(m.receivedAt)}</span>
@@ -107,7 +107,7 @@ function MessageCard({ m, onToggleRead, onDelete }) {
           {longMessage && (
             <button
               onClick={() => setExpanded(e => !e)}
-              className="text-xs text-[#00d4ff] hover:underline mt-1"
+              className="text-xs text-emerald-400 hover:underline mt-1"
             >
               {expanded ? 'Show less' : 'Read more'}
             </button>
@@ -115,19 +115,19 @@ function MessageCard({ m, onToggleRead, onDelete }) {
           <div className="flex items-center gap-2 mt-3 flex-wrap">
             <a
               href={`mailto:${m.email}?subject=${encodeURIComponent(`Re: Your message on dhruvsoran.com`)}`}
-              className="text-xs px-3 py-1.5 rounded-full bg-[#00d4ff]/10 text-[#00d4ff] hover:bg-[#00d4ff]/20 transition-colors"
+              className="text-xs px-3 py-1.5 rounded-full bg-emerald-400/10 text-emerald-400 hover:bg-emerald-400/20 transition-colors"
             >
               Reply
             </a>
             <button
               onClick={() => navigator.clipboard?.writeText(m.email)}
-              className="text-xs px-3 py-1.5 rounded-full border border-app text-app-muted hover:text-app-strong hover:border-[#00d4ff]/30 transition-colors"
+              className="text-xs px-3 py-1.5 rounded-full border border-app text-app-muted hover:text-app-strong hover:border-emerald-400/30 transition-colors"
             >
               Copy email
             </button>
             <button
               onClick={() => onToggleRead(m.id, !m.read)}
-              className="text-xs px-3 py-1.5 rounded-full border border-app text-app-muted hover:text-app-strong hover:border-[#00d4ff]/30 transition-colors"
+              className="text-xs px-3 py-1.5 rounded-full border border-app text-app-muted hover:text-app-strong hover:border-emerald-400/30 transition-colors"
             >
               Mark as {m.read ? 'unread' : 'read'}
             </button>
@@ -191,8 +191,8 @@ export default function Inbox() {
           >
             <div className="flex items-center gap-3 px-5 py-4 border-b border-app">
               <div className="w-9 h-9 rounded-xl flex items-center justify-center"
-                style={{ background: 'linear-gradient(135deg, rgba(0,212,255,0.18), rgba(122,92,255,0.18))' }}>
-                <svg className="w-4 h-4 text-[#00d4ff]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                style={{ background: 'linear-gradient(135deg, rgba(16,185,129,0.18), rgba(52,211,153,0.18))' }}>
+                <svg className="w-4 h-4 text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
                     d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                 </svg>
@@ -217,7 +217,7 @@ export default function Inbox() {
                       onClick={() => setFilter(t.id)}
                       className={`text-xs px-3 py-1 rounded-full transition-all ${
                         filter === t.id
-                          ? 'bg-[#00d4ff]/15 text-[#00d4ff]'
+                          ? 'bg-emerald-400/15 text-emerald-400'
                           : 'text-app-muted hover:text-app-strong'
                       }`}
                     >

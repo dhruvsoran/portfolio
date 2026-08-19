@@ -2,10 +2,10 @@ import { useInView } from 'react-intersection-observer'
 import { motion } from 'framer-motion'
 
 const highlights = [
-  { icon: '🤖', label: 'AI Application Developer', desc: 'Building real-world AI solutions with GenAI & LLMs', color: '#00d4ff' },
+  { icon: '🤖', label: 'AI Application Developer', desc: 'Building real-world AI solutions with GenAI & LLMs', color: '#10b981' },
   { icon: '💡', label: 'Startup Mindset', desc: 'Secured ₹15L MSME funding for Prithv-E Smart Bin', color: '#f59e0b' },
-  { icon: '🏆', label: 'Award Winner', desc: 'National pitch competition winner at IIMS Pune', color: '#7a5cff' },
-  { icon: '🚀', label: 'Full Stack Builder', desc: 'React, Node.js, Firebase, Python & more', color: '#ff6ec7' },
+  { icon: '🏆', label: 'Award Winner', desc: 'National pitch competition winner at IIMS Pune', color: '#34d399' },
+  { icon: '🚀', label: 'Full Stack Builder', desc: 'React, Node.js, Firebase, Python & more', color: '#10b981' },
 ]
 
 export default function About() {
@@ -27,7 +27,7 @@ export default function About() {
           className="text-center mb-4"
         >
           <span className="section-label">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#00d4ff]" />
+            <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
             About
           </span>
         </motion.div>

@@ -6,7 +6,7 @@ const building = [
     desc: 'A workspace that surfaces warm intros, follow-ups, and engagement context — powered by an LLM trained on your public footprint.',
     progress: 70,
     status: 'In progress',
-    color: '#00d4ff',
+    color: '#10b981',
     stack: ['Next.js', 'LangChain', 'Postgres', 'OpenAI'],
   },
   {
@@ -14,7 +14,7 @@ const building = [
     desc: 'A revamped artist marketplace with an AI concierge that matches buyers to artworks by visual style, not just keywords.',
     progress: 45,
     status: 'In progress',
-    color: '#7a5cff',
+    color: '#34d399',
     stack: ['React Native', 'Gemini API', 'Firebase'],
   },
   {
@@ -22,7 +22,7 @@ const building = [
     desc: 'Hardware refresh of the smart-bin prototype — better vision model, lower power, and a fleet dashboard for site operators.',
     progress: 25,
     status: 'Planning',
-    color: '#10b981',
+    color: '#f59e0b',
     stack: ['Raspberry Pi', 'Python', 'MQTT', 'React'],
   },
 ]

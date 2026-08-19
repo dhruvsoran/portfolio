@@ -16,7 +16,7 @@ export default function TechStackIcons() {
         <div
           key={s.name}
           title={s.name}
-          className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl flex items-center justify-center text-[#00d4ff] border border-app bg-app hover:scale-110 hover:border-[#00d4ff]/40 hover:text-[#7a5cff] transition-all duration-300"
+          className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl flex items-center justify-center text-emerald-400 border border-app bg-app hover:scale-110 hover:border-emerald-400/40 hover:text-teal-400 transition-all duration-300"
           style={{ backdropFilter: 'blur(10px)' }}
         >
           <div className="w-5 h-5">{s.svg}</div>

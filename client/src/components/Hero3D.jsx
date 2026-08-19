@@ -10,7 +10,7 @@ export default function Hero3D() {
           className="absolute inset-0"
           style={{
             background:
-              'radial-gradient(ellipse at 30% 50%, rgba(0, 212, 255, 0.12), transparent 50%), radial-gradient(ellipse at 70% 50%, rgba(122, 92, 255, 0.12), transparent 50%)',
+              'radial-gradient(ellipse at 30% 50%, rgba(16, 185, 129, 0.12), transparent 50%), radial-gradient(ellipse at 70% 50%, rgba(52, 211, 153, 0.12), transparent 50%)',
           }}
         />
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[var(--bg)]/30 to-[var(--bg)]/80" />
@@ -24,7 +24,7 @@ export default function Hero3D() {
             transition={{ delay: 0.4, duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
           >
             <span className="section-label mb-6 inline-flex">
-              <span className="w-2 h-2 rounded-full bg-[#00d4ff] animate-pulse" />
+              <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
               Open to opportunities
             </span>
           </motion.div>
@@ -58,15 +58,15 @@ export default function Hero3D() {
             <div
               className="rounded-2xl p-4 sm:p-5 text-left"
               style={{
-                background: 'linear-gradient(135deg, rgba(0, 212, 255, 0.08), rgba(122, 92, 255, 0.08))',
-                border: '1px solid rgba(0, 212, 255, 0.2)',
+                background: 'linear-gradient(135deg, rgba(16, 185, 129, 0.08), rgba(52, 211, 153, 0.08))',
+                border: '1px solid rgba(16, 185, 129, 0.2)',
               }}
             >
               <div className="flex items-center gap-2 mb-2">
-                <svg className="w-4 h-4 text-[#00d4ff]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <svg className="w-4 h-4 text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                 </svg>
-                <span className="text-xs font-semibold tracking-wider text-[#00d4ff] uppercase">What I'm looking for</span>
+                <span className="text-xs font-semibold tracking-wider text-emerald-400 uppercase">What I'm looking for</span>
               </div>
               <p className="text-sm sm:text-[15px] text-app-strong leading-relaxed">
                 AI Engineer / Full-Stack Developer roles where I can ship <span className="text-white font-semibold">production-grade GenAI products</span>,
@@ -108,7 +108,7 @@ export default function Hero3D() {
             <a
               href="/resume.pdf"
               download="Dhruv_Soran_Resume.pdf"
-              className="inline-flex items-center gap-2 px-5 py-2.5 text-sm rounded-full border border-[#ff6ec7]/30 text-[#ff6ec7] hover:bg-[#ff6ec7]/10 transition-all duration-300"
+              className="inline-flex items-center gap-2 px-5 py-2.5 text-sm rounded-full border border-amber-500/30 text-amber-500 hover:bg-amber-500/10 transition-all duration-300"
             >
               <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
@@ -139,7 +139,7 @@ export default function Hero3D() {
           transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
           className="w-6 h-10 rounded-full border-2 border-app flex items-start justify-center pt-2"
         >
-          <div className="w-1 h-2 rounded-full bg-[#00d4ff]/60" />
+          <div className="w-1 h-2 rounded-full bg-emerald-400/60" />
         </motion.div>
       </motion.div>
     </section>

@@ -113,7 +113,7 @@ export default function CommandPalette() {
     <>
       <button
         onClick={() => setOpen(true)}
-        className="hidden sm:inline-flex items-center gap-2 px-3 py-1.5 text-xs text-app-muted rounded-full border border-app hover:border-[#00d4ff]/30 hover:text-app-strong transition-all duration-300"
+        className="hidden sm:inline-flex items-center gap-2 px-3 py-1.5 text-xs text-app-muted rounded-full border border-app hover:border-emerald-400/30 hover:text-app-strong transition-all duration-300"
         aria-label="Open command palette"
       >
         <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -143,7 +143,7 @@ export default function CommandPalette() {
               style={{
                 background: 'var(--bg-soft, var(--bg))',
                 border: '1px solid var(--border-strong)',
-                boxShadow: '0 30px 80px rgba(0,0,0,0.5), 0 0 0 1px rgba(0, 212, 255, 0.08)',
+                boxShadow: '0 30px 80px rgba(0,0,0,0.5), 0 0 0 1px rgba(16, 185, 129, 0.08)',
               }}
               onClick={e => e.stopPropagation()}
             >
@@ -180,7 +180,7 @@ export default function CommandPalette() {
                             onClick={() => run(item)}
                             onMouseEnter={() => setHighlight(flatIndex)}
                             className={`w-full flex items-center gap-3 px-4 py-2.5 text-sm transition-colors ${
-                              active ? 'bg-[#00d4ff]/10 text-app-strong' : 'text-app-muted hover:bg-white/5'
+                              active ? 'bg-emerald-400/10 text-app-strong' : 'text-app-muted hover:bg-white/5'
                             }`}
                           >
                             <span className="w-7 text-base">{item.icon}</span>

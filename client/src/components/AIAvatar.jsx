@@ -123,7 +123,7 @@ function Waveform({ speaking, level }) {
         return (
           <motion.div
             key={i}
-            className="w-1 rounded-full bg-gradient-to-t from-[#00d4ff] to-[#7a5cff]"
+            className="w-1 rounded-full bg-gradient-to-t from-emerald-400 to-teal-400"
             animate={{ height: `${h}%` }}
             transition={{ duration: 0.08, ease: 'linear' }}
             style={{ height: `${h}%` }}
@@ -297,11 +297,11 @@ export default function AIAvatar() {
               speaking
                 ? {
                     boxShadow: [
-                      '0 0 0 0 rgba(0, 212, 255, 0.45)',
-                      '0 0 0 30px rgba(0, 212, 255, 0)',
+                      '0 0 0 0 rgba(16, 185, 129, 0.45)',
+                      '0 0 0 30px rgba(16, 185, 129, 0)',
                     ],
                   }
-                : { boxShadow: '0 0 0 0 rgba(0, 212, 255, 0)' }
+                : { boxShadow: '0 0 0 0 rgba(16, 185, 129, 0)' }
             }
             transition={{ duration: 1.6, repeat: speaking ? Infinity : 0 }}
             style={{ zIndex: 1 }}
@@ -311,15 +311,15 @@ export default function AIAvatar() {
             className="absolute inset-0 rounded-[40px] overflow-hidden"
             style={{
               padding: '3px',
-              background: 'linear-gradient(135deg, #00d4ff, #7a5cff, #ff6ec7, #00d4ff)',
+              background: 'linear-gradient(135deg, #10b981, #34d399, #f59e0b, #10b981)',
               backgroundSize: '300% 300%',
               animation: 'gradientShift 6s ease infinite',
               boxShadow: speaking
-                ? '0 0 80px rgba(0, 212, 255, 0.45), 0 0 120px rgba(122, 92, 255, 0.25)'
-                : '0 0 50px rgba(0, 212, 255, 0.18)',
+                ? '0 0 80px rgba(16, 185, 129, 0.45), 0 0 120px rgba(52, 211, 153, 0.25)'
+                : '0 0 50px rgba(16, 185, 129, 0.18)',
             }}
           >
-            <div className="relative w-full h-full rounded-[38px] overflow-hidden bg-[#0a0a23]">
+            <div className="relative w-full h-full rounded-[38px] overflow-hidden bg-[#020617]">
               {hasPhoto ? (
                 <motion.img
                   src={AVATAR_IMAGE_PATH}
@@ -339,7 +339,7 @@ export default function AIAvatar() {
                 className="absolute inset-0 pointer-events-none"
                 style={{
                   background:
-                    'radial-gradient(ellipse at 30% 20%, rgba(255, 200, 150, 0.18), transparent 50%), radial-gradient(ellipse at 70% 80%, rgba(0, 200, 255, 0.15), transparent 60%)',
+                    'radial-gradient(ellipse at 30% 20%, rgba(245, 158, 11, 0.18), transparent 50%), radial-gradient(ellipse at 70% 80%, rgba(52, 211, 153, 0.15), transparent 60%)',
                   mixBlendMode: 'overlay',
                 }}
               />
@@ -364,7 +364,7 @@ export default function AIAvatar() {
                 className="absolute bottom-3 left-3 px-2.5 py-1 rounded-full text-[10px] font-semibold tracking-wider backdrop-blur-md"
                 style={{
                   background: speaking
-                    ? 'linear-gradient(135deg, rgba(0, 212, 255, 0.3), rgba(122, 92, 255, 0.3))'
+                    ? 'linear-gradient(135deg, rgba(16, 185, 129, 0.3), rgba(52, 211, 153, 0.3))'
                     : 'rgba(0, 0, 0, 0.5)',
                   border: '1px solid rgba(255,255,255,0.15)',
                   color: '#fff',
@@ -384,7 +384,7 @@ export default function AIAvatar() {
                   >
                     <div className="glass-strong px-3 py-1.5 rounded-full flex items-center gap-2">
                       <motion.div
-                        className="w-1.5 h-1.5 rounded-full bg-[#00d4ff]"
+                        className="w-1.5 h-1.5 rounded-full bg-emerald-400"
                         animate={{ scale: [1, 1.5, 1], opacity: [1, 0.4, 1] }}
                         transition={{ duration: 1.2, repeat: Infinity }}
                       />
@@ -420,7 +420,7 @@ export default function AIAvatar() {
               ⚠ AI voice not configured
             </p>
             <p className="text-[10px] text-gray-500 mt-1">
-              Add <code className="text-[#00d4ff]">OPENAI_API_KEY</code> to <code>server/.env</code> to enable human-like TTS voice.
+              Add <code className="text-emerald-400">OPENAI_API_KEY</code> to <code>server/.env</code> to enable human-like TTS voice.
             </p>
           </div>
         )}

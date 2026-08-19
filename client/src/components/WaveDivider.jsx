@@ -13,9 +13,9 @@ export default function WaveDivider({ flip = false, className = '' }) {
       >
         <defs>
           <linearGradient id="wave-grad" x1="0" y1="0" x2="1" y2="0">
-            <stop offset="0%" stopColor="#00d4ff" stopOpacity="0.55" />
-            <stop offset="50%" stopColor="#7a5cff" stopOpacity="0.6" />
-            <stop offset="100%" stopColor="#ff6ec7" stopOpacity="0.55" />
+            <stop offset="0%" stopColor="#10b981" stopOpacity="0.55" />
+            <stop offset="50%" stopColor="#34d399" stopOpacity="0.6" />
+            <stop offset="100%" stopColor="#f59e0b" stopOpacity="0.55" />
           </linearGradient>
         </defs>
         <g style={{ animation: 'waveSlide 16s linear infinite' }}>

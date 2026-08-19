@@ -5,17 +5,17 @@ const skillCategories = [
   {
     label: 'Programming',
     skills: ['Python', 'JavaScript', 'SQL'],
-    color: '#00d4ff',
+    color: '#10b981',
   },
   {
     label: 'Web Development',
     skills: ['React.js', 'Node.js', 'Express.js', 'HTML', 'CSS', 'React Native'],
-    color: '#7a5cff',
+    color: '#34d399',
   },
   {
     label: 'AI & Data',
     skills: ['Generative AI', 'AI Agents', 'AI Product Development', 'APIs', 'LLMs'],
-    color: '#ff6ec7',
+    color: '#f59e0b',
   },
   {
     label: 'Tools & Platforms',
@@ -60,7 +60,7 @@ export default function Skills() {
           className="text-center mb-4"
         >
           <span className="section-label">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#00d4ff]" />
+            <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
             Skills
           </span>
         </motion.div>

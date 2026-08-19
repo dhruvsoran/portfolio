@@ -13,11 +13,11 @@ const fallbackStats = {
     { name: 'Python', pct: 28, color: '#3776ab' },
     { name: 'TypeScript', pct: 18, color: '#3178c6' },
     { name: 'HTML/CSS', pct: 12, color: '#e34c26' },
-    { name: 'Other', pct: 4, color: '#7a5cff' },
+    { name: 'Other', pct: 4, color: '#34d399' },
   ],
 }
 
-function Stat({ label, value, color = '#00d4ff', delay = 0 }) {
+function Stat({ label, value, color = '#10b981', delay = 0 }) {
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -79,7 +79,7 @@ export default function GitHubStats() {
           href={`https://github.com/${username}`}
           target="_blank"
           rel="noopener noreferrer"
-          className="text-[10px] text-[#00d4ff] hover:underline flex items-center gap-1"
+          className="text-[10px] text-emerald-400 hover:underline flex items-center gap-1"
         >
           View profile
           <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -89,10 +89,10 @@ export default function GitHubStats() {
       </div>
 
       <div className="grid grid-cols-4 gap-2 mb-5">
-        <Stat label="Repos" value={loading ? '…' : stats.repos} color="#00d4ff" delay={0.05} />
+        <Stat label="Repos" value={loading ? '…' : stats.repos} color="#10b981" delay={0.05} />
         <Stat label="Stars" value={loading ? '…' : stats.stars} color="#f59e0b" delay={0.1} />
-        <Stat label="Followers" value={loading ? '…' : stats.followers} color="#7a5cff" delay={0.15} />
-        <Stat label="Following" value={loading ? '…' : stats.following} color="#ff6ec7" delay={0.2} />
+        <Stat label="Followers" value={loading ? '…' : stats.followers} color="#34d399" delay={0.15} />
+        <Stat label="Following" value={loading ? '…' : stats.following} color="#10b981" delay={0.2} />
       </div>
 
       <div>

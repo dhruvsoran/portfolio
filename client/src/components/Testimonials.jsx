@@ -9,7 +9,7 @@ const testimonials = [
     name: 'Emerald AI Solutions',
     role: 'Letter of Recommendation · AI App Developer Intern',
     org: 'Emerald AI Solutions Private Limited',
-    accent: '#00d4ff',
+    accent: '#10b981',
     avatar: '📄',
     type: 'LoR',
   },
@@ -19,7 +19,7 @@ const testimonials = [
     name: 'Startup Mentor',
     role: 'Mentor · Thingqbator Program',
     org: 'Thingqbator',
-    accent: '#7a5cff',
+    accent: '#34d399',
     avatar: '🧭',
     type: 'Mentor',
   },
@@ -29,7 +29,7 @@ const testimonials = [
     name: 'Pitch Competition Jury',
     role: 'Jury · National Pitch Competition',
     org: 'IIMS Pune',
-    accent: '#ff6ec7',
+    accent: '#f59e0b',
     avatar: '🏆',
     type: 'Jury',
   },
@@ -96,7 +96,7 @@ function TestimonialCard({ t, i, inView }) {
         {isLong && (
           <button
             onClick={() => setExpanded(e => !e)}
-            className="md:hidden mt-2 text-xs font-semibold text-[#00d4ff] inline-flex items-center gap-1 min-h-[32px]"
+            className="md:hidden mt-2 text-xs font-semibold text-emerald-400 inline-flex items-center gap-1 min-h-[32px]"
             style={{ touchAction: 'manipulation' }}
           >
             {expanded ? 'Show less' : 'Read full letter'}
@@ -141,7 +141,7 @@ export default function Testimonials() {
           className="text-center mb-4"
         >
           <span className="section-label">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#00d4ff]" />
+            <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
             Testimonials
           </span>
         </motion.div>
@@ -178,7 +178,7 @@ export default function Testimonials() {
         >
           <a
             href="mailto:dhruvsoran@gmail.com?subject=LoR%20Request"
-            className="inline-flex items-center gap-2 text-sm text-app-muted hover:text-[#00d4ff] transition-colors"
+            className="inline-flex items-center gap-2 text-sm text-app-muted hover:text-emerald-400 transition-colors"
           >
             <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />

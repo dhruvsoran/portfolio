@@ -12,7 +12,7 @@ const projects = [
     tech: ['Python', 'IoT', 'Image Processing', 'Embedded'],
     link: 'https://youtu.be/W4KhOqFW_Is',
     gradient: 'from-emerald-500 to-teal-600',
-    accent: '#00d4ff',
+    accent: '#10b981',
     problem: 'Manual waste segregation in public spaces is unscalable — most waste ends up in landfills because of human sorting errors.',
     approach: 'Built a vision pipeline (Python + OpenCV) running on a Raspberry Pi to detect 4 waste categories in real time, with a hardware servo array for physical sorting.',
     result: 'Secured ₹15L in MSME funding, built a working prototype deployed in pilot sites, and was featured in two regional newspapers.',
@@ -30,8 +30,8 @@ const projects = [
       'A discovery-to-checkout platform with an AI concierge that understands buyer taste and surfaces relevant artworks.',
     tech: ['React.js', 'Node.js', 'Firebase', 'Gemini API'],
     link: 'https://www.kalaconnect.me/',
-    gradient: 'from-violet-500 to-purple-600',
-    accent: '#7a5cff',
+    gradient: 'from-emerald-600 to-teal-500',
+    accent: '#34d399',
     problem: 'Independent artists struggle with discoverability on generic marketplaces; buyers cant find art that matches their taste.',
     approach: 'Built a full-stack platform (React + Node + Firebase) with a Gemini-powered recommendation engine that ranks artworks by visual style and buyer interaction history.',
     result: 'Shipped a working demo with AI recommendations, deployed on Vercel + Render, and validated the concept with 20+ artist sign-ups during user testing.',
@@ -48,8 +48,8 @@ const projects = [
     longDesc: 'Removes the cold-search problem for first-time interns by recommending opportunities weighted to their profile.',
     tech: ['Python', 'AI Logic', 'Postgresql'],
     link: 'https://sih-2025-project-2.onrender.com/',
-    gradient: 'from-pink-500 to-rose-600',
-    accent: '#ff6ec7',
+    gradient: 'from-teal-500 to-emerald-600',
+    accent: '#059669',
     problem: 'Students waste hours scrolling generic internship boards that dont account for their actual skills or goals.',
     approach: 'Designed a weighted scoring algorithm (Python) that parses student skill-graphs and ranks internships on skill-overlap, location preference, and domain interest.',
     result: 'Reduced discovery time from hours to minutes during user testing, with positive feedback from college placement cell on its potential integration.',
@@ -57,6 +57,24 @@ const projects = [
       { value: '~80%', label: 'time saved' },
       { value: '10+', label: 'data signals' },
       { value: '3', label: 'filter dimensions' },
+    ],
+  },
+  {
+    title: 'Nexora',
+    subtitle: 'AI-Powered Project Management SaaS',
+    desc: 'Project management platform with Kanban boards, task management, team collaboration, notifications, and project analytics.',
+    longDesc: 'Full-stack SaaS with real-time AI voice conversations via Agora AI, RESTful APIs, and modern project management features.',
+    tech: ['React.js', 'Node.js', 'Express.js', 'MongoDB', 'Agora AI'],
+    link: 'https://nexora-ruby-nu.vercel.app/',
+    gradient: 'from-teal-600 to-emerald-500',
+    accent: '#14b8a6',
+    problem: 'Teams struggle with fragmented tools for project management, communication, and AI-assisted decision making.',
+    approach: 'Built a unified platform with Kanban boards, real-time collaboration, notification system, and integrated Agora AI for voice-based AI assistance. Deployed frontend on Vercel and backend on Render using RESTful APIs.',
+    result: 'Delivered a production-ready SaaS with real-time features, AI voice integration, and scalable architecture.',
+    metrics: [
+      { value: '5+', label: 'core modules' },
+      { value: 'Real-time', label: 'AI voice' },
+      { value: '2', label: 'deploy targets' },
     ],
   },
 ]
@@ -97,7 +115,7 @@ function ProjectCard({ project, index, inView }) {
             <span className="text-[10px] font-mono text-app-muted ml-auto">CASE STUDY</span>
           </div>
 
-          <h3 className="text-xl font-bold text-app-strong mb-1 group-hover:text-[#00d4ff] transition-colors duration-300">
+          <h3 className="text-xl font-bold text-app-strong mb-1 group-hover:text-emerald-400 transition-colors duration-300">
             {project.title}
           </h3>
           {project.subtitle && (
@@ -140,7 +158,7 @@ function ProjectCard({ project, index, inView }) {
                     <p className="text-sm text-app-muted leading-relaxed">{project.problem}</p>
                   </div>
                   <div>
-                    <div className="text-[10px] font-bold tracking-widest text-[#7a5cff] uppercase mb-1.5">Approach</div>
+                    <div className="text-[10px] font-bold tracking-widest text-emerald-400 uppercase mb-1.5">Approach</div>
                     <p className="text-sm text-app-muted leading-relaxed">{project.approach}</p>
                   </div>
                   <div>
@@ -207,7 +225,7 @@ export default function Projects() {
           className="text-center mb-4"
         >
           <span className="section-label">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#00d4ff]" />
+            <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
             Projects
           </span>
         </motion.div>

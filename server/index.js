@@ -230,7 +230,7 @@ const INTRO_SCRIPT = `Hey there! I'm Dhruv Soran, an AI-focused computer science
 
 I work across AI application development, generative AI, and full-stack engineering. I recently built Prithv-E, an AI-enabled smart bin, and even secured fifteen lakh in MSME funding to take it forward.
 
-I've also built KalaConnect, an artist marketplace, and Prayaas, an AI-driven internship matching platform. Currently, I'm interning at Emerald AI as an AI App Developer, where I work on products like Nexus AI and Eden.
+I've also built KalaConnect, an artist marketplace, Prayaas, an AI-driven internship matching platform, and Nexora, an AI-powered project management SaaS with real-time voice conversations via Agora AI. Currently, I'm interning at Emerald AI as an AI App Developer, where I work on products like Nexus AI and Eden.
 
 I think the best way to learn is to ship. So that's exactly what I do. If you're working on something interesting, let's connect!`;
 

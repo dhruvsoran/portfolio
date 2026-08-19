@@ -8,7 +8,7 @@ const education = [
     year: '2023 – 2027',
     score: '8.6 CGPA',
     icon: '🎓',
-    color: '#00d4ff',
+    color: '#10b981',
   },
   {
     degree: 'Senior Secondary (XII)',
@@ -16,7 +16,7 @@ const education = [
     year: '2023',
     score: '92%',
     icon: '📘',
-    color: '#7a5cff',
+    color: '#34d399',
   },
   {
     degree: 'High School (X)',
@@ -24,7 +24,7 @@ const education = [
     year: '2021',
     score: '98.2%',
     icon: '📖',
-    color: '#ff6ec7',
+    color: '#f59e0b',
   },
 ]
 
@@ -41,7 +41,7 @@ export default function Education() {
           className="text-center mb-4"
         >
           <span className="section-label">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#00d4ff]" />
+            <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
             Education
           </span>
         </motion.div>
@@ -56,7 +56,7 @@ export default function Education() {
         </motion.h2>
 
         <div className="relative">
-          <div className="absolute left-[26px] md:left-[34px] top-0 bottom-0 w-px bg-gradient-to-b from-[#00d4ff]/40 via-[#7a5cff]/30 to-transparent" />
+          <div className="absolute left-[26px] md:left-[34px] top-0 bottom-0 w-px bg-gradient-to-b from-emerald-500/40 via-teal-400/30 to-transparent" />
 
           {education.map((item, i) => (
             <motion.div
@@ -83,7 +83,7 @@ export default function Education() {
                         {item.score}
                       </span>
                     </div>
-                    <p className="text-[#00d4ff] font-medium text-sm md:text-base">{item.school}</p>
+                    <p className="text-emerald-400 font-medium text-sm md:text-base">{item.school}</p>
                     <p className="text-app-muted text-xs mt-1.5 font-mono">{item.year}</p>
                   </div>
                 </div>

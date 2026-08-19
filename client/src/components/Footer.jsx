@@ -14,7 +14,7 @@ export default function Footer() {
             href="https://github.com/dhruvsoran"
             target="_blank"
             rel="noopener noreferrer"
-            className="min-w-[44px] min-h-[44px] flex items-center justify-center text-app-muted hover:text-[#00d4ff] transition-colors duration-300 hover:scale-110 rounded-lg"
+            className="min-w-[44px] min-h-[44px] flex items-center justify-center text-app-muted hover:text-emerald-400 transition-colors duration-300 hover:scale-110 rounded-lg"
             aria-label="GitHub"
             style={{ touchAction: 'manipulation' }}
           >
@@ -26,7 +26,7 @@ export default function Footer() {
             href="https://linkedin.com/in/dhruv-soran-950495211"
             target="_blank"
             rel="noopener noreferrer"
-            className="min-w-[44px] min-h-[44px] flex items-center justify-center text-app-muted hover:text-[#00d4ff] transition-colors duration-300 hover:scale-110 rounded-lg"
+            className="min-w-[44px] min-h-[44px] flex items-center justify-center text-app-muted hover:text-emerald-400 transition-colors duration-300 hover:scale-110 rounded-lg"
             aria-label="LinkedIn"
             style={{ touchAction: 'manipulation' }}
           >
@@ -36,7 +36,7 @@ export default function Footer() {
           </a>
           <a
             href="mailto:dhruvsoran@gmail.com"
-            className="min-w-[44px] min-h-[44px] flex items-center justify-center text-app-muted hover:text-[#00d4ff] transition-colors duration-300 hover:scale-110 rounded-lg"
+            className="min-w-[44px] min-h-[44px] flex items-center justify-center text-app-muted hover:text-emerald-400 transition-colors duration-300 hover:scale-110 rounded-lg"
             aria-label="Email"
             style={{ touchAction: 'manipulation' }}
           >
@@ -47,7 +47,7 @@ export default function Footer() {
           <a
             href="/resume.pdf"
             download="Dhruv_Soran_Resume.pdf"
-            className="min-w-[44px] min-h-[44px] flex items-center justify-center text-app-muted hover:text-[#ff6ec7] transition-colors duration-300 hover:scale-110 rounded-lg"
+            className="min-w-[44px] min-h-[44px] flex items-center justify-center text-app-muted hover:text-amber-500 transition-colors duration-300 hover:scale-110 rounded-lg"
             aria-label="Download Resume"
             style={{ touchAction: 'manipulation' }}
           >

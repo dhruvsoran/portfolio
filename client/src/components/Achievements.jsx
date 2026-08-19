@@ -27,7 +27,7 @@ const achievements = [
     desc: 'Selected among the Top 40 teams out of 1,200 for the Thingqbator Startup Stage accelerator program.',
     proof: null,
     proofLabel: null,
-    color: '#7a5cff',
+    color: '#34d399',
   },
   {
     icon: '📰',
@@ -36,7 +36,7 @@ const achievements = [
     desc: 'Featured twice in local newspapers — once for academic excellence (98.2% in Class X) and once for developing the Prithv-E prototype.',
     proof: 'https://youtu.be/W4KhOqFW_Is',
     proofLabel: 'Read story',
-    color: '#ff6ec7',
+    color: '#10b981',
   },
   {
     icon: '🏅',
@@ -54,7 +54,7 @@ const achievements = [
     desc: 'Secured ₹15L in MSME funding for the Prithv-E Smart Bin — a working hardware prototype in the field.',
     proof: 'https://youtu.be/W4KhOqFW_Is',
     proofLabel: 'See prototype',
-    color: '#00d4ff',
+    color: '#10b981',
   },
 ]
 
@@ -71,7 +71,7 @@ export default function Achievements() {
           className="text-center mb-4"
         >
           <span className="section-label">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#00d4ff]" />
+            <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
             Achievements
           </span>
         </motion.div>

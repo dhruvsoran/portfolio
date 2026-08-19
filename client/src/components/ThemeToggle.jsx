@@ -18,7 +18,7 @@ export default function ThemeToggle() {
         className="relative w-5 h-5"
       >
         {isDark ? (
-          <svg viewBox="0 0 24 24" fill="none" className="w-5 h-5 text-gray-300 group-hover:text-[#00d4ff] transition-colors">
+          <svg viewBox="0 0 24 24" fill="none" className="w-5 h-5 text-gray-300 group-hover:text-emerald-400 transition-colors">
             <path
               d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"
               fill="currentColor"

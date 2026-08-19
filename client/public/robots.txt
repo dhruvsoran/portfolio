@@ -32,3 +32,5 @@ Disallow: /api/
 Disallow: /uploads/
 
 Sitemap: https://portfolio-5zq3.onrender.com/sitemap.xml
+
+Host: https://portfolio-5zq3.onrender.com

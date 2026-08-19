@@ -13,7 +13,7 @@ const timeline = [
       'Contributed to Eden — AI learning companion for students and teachers with personalized study planning.',
       'Integrated Generative AI, LLM APIs, and REST APIs to ship scalable AI-powered features.',
     ],
-    color: '#00d4ff',
+    color: '#10b981',
     icon: '💼',
   },
   {
@@ -26,7 +26,7 @@ const timeline = [
       'Current CGPA: 8.6 — coursework in AI, data structures, distributed systems, and product engineering.',
       'Active in hackathons (SIH, Wadhwani Bootcamp, IDE Bootcamp Lucknow) and startup-stage programs.',
     ],
-    color: '#7a5cff',
+    color: '#34d399',
     icon: '🎓',
   },
   {
@@ -49,7 +49,7 @@ const timeline = [
     period: '2023',
     location: 'India',
     points: ['Score: 92% — strong foundation in PCM and computer science.'],
-    color: '#ff6ec7',
+    color: '#f59e0b',
     icon: '📘',
   },
   {
@@ -82,7 +82,7 @@ export default function Journey() {
           className="text-center mb-4"
         >
           <span className="section-label">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#00d4ff]" />
+            <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
             Journey
           </span>
         </motion.div>
@@ -110,7 +110,7 @@ export default function Journey() {
             className="absolute left-[26px] md:left-[34px] top-0 bottom-0 w-px"
             style={{
               background:
-                'linear-gradient(180deg, rgba(0, 212, 255, 0.4) 0%, rgba(122, 92, 255, 0.3) 40%, rgba(255, 110, 199, 0.2) 70%, transparent 100%)',
+                'linear-gradient(180deg, rgba(16, 185, 129, 0.4) 0%, rgba(52, 211, 153, 0.3) 40%, rgba(245, 158, 11, 0.2) 70%, transparent 100%)',
             }}
           />
 

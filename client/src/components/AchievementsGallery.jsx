@@ -107,7 +107,7 @@ export default function AchievementsGallery() {
           className="text-center mb-4"
         >
           <span className="section-label">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#00d4ff]" />
+            <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
             Highlights
           </span>
         </motion.div>
@@ -186,7 +186,7 @@ export default function AchievementsGallery() {
                   <button
                     onClick={(e) => { e.stopPropagation(); prev() }}
                     aria-label="Previous photo"
-                    className="absolute left-3 top-1/2 -translate-y-1/2 w-11 h-11 rounded-full bg-black/50 backdrop-blur-md text-white flex items-center justify-center opacity-0 group-hover:opacity-100 hover:bg-[#00d4ff]/80 transition-all duration-300"
+                    className="absolute left-3 top-1/2 -translate-y-1/2 w-11 h-11 rounded-full bg-black/50 backdrop-blur-md text-white flex items-center justify-center opacity-0 group-hover:opacity-100 hover:bg-emerald-400/80 transition-all duration-300"
                   >
                     <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -195,7 +195,7 @@ export default function AchievementsGallery() {
                   <button
                     onClick={(e) => { e.stopPropagation(); next() }}
                     aria-label="Next photo"
-                    className="absolute right-3 top-1/2 -translate-y-1/2 w-11 h-11 rounded-full bg-black/50 backdrop-blur-md text-white flex items-center justify-center opacity-0 group-hover:opacity-100 hover:bg-[#00d4ff]/80 transition-all duration-300"
+                    className="absolute right-3 top-1/2 -translate-y-1/2 w-11 h-11 rounded-full bg-black/50 backdrop-blur-md text-white flex items-center justify-center opacity-0 group-hover:opacity-100 hover:bg-emerald-400/80 transition-all duration-300"
                   >
                     <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -214,7 +214,7 @@ export default function AchievementsGallery() {
                     aria-label={`Go to photo ${i + 1}`}
                     className={`h-1.5 rounded-full transition-all duration-300 ${
                       i === index
-                        ? 'w-10 bg-gradient-to-r from-[#00d4ff] to-[#7a5cff]'
+                        ? 'w-10 bg-gradient-to-r from-emerald-400 to-teal-400'
                         : 'w-1.5 bg-app hover:bg-app-muted'
                     }`}
                   />
@@ -230,7 +230,7 @@ export default function AchievementsGallery() {
               <span>Click image for fullscreen</span>
               <button
                 onClick={fetchPhotos}
-                className="ml-3 inline-flex items-center gap-1 hover:text-[#00d4ff] transition-colors"
+                className="ml-3 inline-flex items-center gap-1 hover:text-emerald-400 transition-colors"
                 title="Rescan folder"
               >
                 <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -281,7 +281,7 @@ export default function AchievementsGallery() {
             <button
               onClick={(e) => { e.stopPropagation(); prev() }}
               aria-label="Previous"
-              className="absolute left-3 sm:left-6 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/10 text-white flex items-center justify-center hover:bg-[#00d4ff]/80 transition-colors z-10"
+              className="absolute left-3 sm:left-6 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/10 text-white flex items-center justify-center hover:bg-emerald-400/80 transition-colors z-10"
             >
               <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -291,7 +291,7 @@ export default function AchievementsGallery() {
             <button
               onClick={(e) => { e.stopPropagation(); next() }}
               aria-label="Next"
-              className="absolute right-3 sm:right-6 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/10 text-white flex items-center justify-center hover:bg-[#00d4ff]/80 transition-colors z-10"
+              className="absolute right-3 sm:right-6 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/10 text-white flex items-center justify-center hover:bg-emerald-400/80 transition-colors z-10"
             >
               <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -330,14 +330,14 @@ function EmptyState() {
       style={{ background: 'color-mix(in srgb, var(--bg-soft) 30%, transparent)' }}
     >
       <div className="w-16 h-16 rounded-2xl mx-auto mb-5 flex items-center justify-center"
-        style={{ background: 'linear-gradient(135deg, rgba(0,212,255,0.15), rgba(122,92,255,0.15))' }}>
+        style={{ background: 'linear-gradient(135deg, rgba(16,185,129,0.15), rgba(52,211,153,0.15))' }}>
         <span className="text-3xl">📸</span>
       </div>
       <h3 className="text-lg font-semibold text-app-strong mb-2">No photos yet</h3>
       <p className="text-sm text-app-muted max-w-md mx-auto mb-5">
         Drop your achievement JPEGs, PNGs, or WebPs into the folder below and they will appear here automatically.
       </p>
-      <code className="inline-block px-4 py-2 rounded-xl border border-app text-sm font-mono text-[#00d4ff]" style={{ background: 'color-mix(in srgb, var(--bg-soft) 60%, transparent)' }}>
+      <code className="inline-block px-4 py-2 rounded-xl border border-app text-sm font-mono text-emerald-400" style={{ background: 'color-mix(in srgb, var(--bg-soft) 60%, transparent)' }}>
         server/uploads/achievements/
       </code>
       <p className="text-[11px] text-app-muted mt-4 font-mono">

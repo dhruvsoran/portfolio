@@ -28,7 +28,7 @@ function Particles({ count = 80 }) {
       </bufferGeometry>
       <pointsMaterial
         size={0.04}
-        color="#00d4ff"
+        color="#10b981"
         transparent
         opacity={0.5}
         blending={THREE.AdditiveBlending}
@@ -44,7 +44,7 @@ function FloatingGeometries() {
   const meshes = useMemo(() => {
     const arr = []
     const geoTypes = ['icosahedron', 'octahedron', 'torus']
-    const colors = ['#00d4ff', '#7a5cff', '#ff6ec7']
+    const colors = ['#10b981', '#34d399', '#f59e0b']
     for (let i = 0; i < 4; i++) {
       arr.push({
         position: [(Math.random() - 0.5) * 10, (Math.random() - 0.5) * 6, (Math.random() - 0.5) * 4 - 2],

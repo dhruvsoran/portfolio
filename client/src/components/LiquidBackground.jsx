@@ -2,22 +2,22 @@ import { useEffect, useState } from 'react'
 import { useTheme } from '../context/ThemeContext'
 
 const DARK = [
-  { id: 'a', cx: 10, cy: 15, r: 14, fill: '#06b6d4', op: 0.22, d: 28, dl: 0 },
-  { id: 'b', cx: 85, cy: 22, r: 16, fill: '#0ea5e9', op: 0.20, d: 34, dl: -8 },
+  { id: 'a', cx: 10, cy: 15, r: 14, fill: '#10b981', op: 0.22, d: 28, dl: 0 },
+  { id: 'b', cx: 85, cy: 22, r: 16, fill: '#34d399', op: 0.20, d: 34, dl: -8 },
   { id: 'c', cx: 50, cy: 55, r: 12, fill: '#10b981', op: 0.18, d: 38, dl: -16 },
   { id: 'd', cx: 20, cy: 80, r: 14, fill: '#14b8a6', op: 0.20, d: 30, dl: -22 },
-  { id: 'e', cx: 90, cy: 75, r: 13, fill: '#00d4ff', op: 0.22, d: 32, dl: -6 },
-  { id: 'f', cx: 65, cy: 8,  r: 10, fill: '#22d3ee', op: 0.18, d: 36, dl: -20 },
+  { id: 'e', cx: 90, cy: 75, r: 13, fill: '#f59e0b', op: 0.22, d: 32, dl: -6 },
+  { id: 'f', cx: 65, cy: 8,  r: 10, fill: '#10b981', op: 0.18, d: 36, dl: -20 },
   { id: 'g', cx: 40, cy: 35, r: 9,  fill: '#34d399', op: 0.16, d: 40, dl: -12 },
 ]
 
 const LIGHT = [
-  { id: 'a', cx: 10, cy: 15, r: 14, fill: '#0ea5e9', op: 0.16, d: 28, dl: 0 },
-  { id: 'b', cx: 85, cy: 22, r: 16, fill: '#06b6d4', op: 0.14, d: 34, dl: -8 },
+  { id: 'a', cx: 10, cy: 15, r: 14, fill: '#34d399', op: 0.16, d: 28, dl: 0 },
+  { id: 'b', cx: 85, cy: 22, r: 16, fill: '#10b981', op: 0.14, d: 34, dl: -8 },
   { id: 'c', cx: 50, cy: 55, r: 12, fill: '#10b981', op: 0.12, d: 38, dl: -16 },
   { id: 'd', cx: 20, cy: 80, r: 14, fill: '#14b8a6', op: 0.14, d: 30, dl: -22 },
-  { id: 'e', cx: 90, cy: 75, r: 13, fill: '#38bdf8', op: 0.16, d: 32, dl: -6 },
-  { id: 'f', cx: 65, cy: 8,  r: 10, fill: '#22d3ee', op: 0.12, d: 36, dl: -20 },
+  { id: 'e', cx: 90, cy: 75, r: 13, fill: '#f59e0b', op: 0.16, d: 32, dl: -6 },
+  { id: 'f', cx: 65, cy: 8,  r: 10, fill: '#10b981', op: 0.12, d: 36, dl: -20 },
   { id: 'g', cx: 40, cy: 35, r: 9,  fill: '#34d399', op: 0.10, d: 40, dl: -12 },
 ]
 

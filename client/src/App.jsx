@@ -13,9 +13,6 @@ import Certifications from './components/Certifications'
 import Testimonials from './components/Testimonials'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
-import ParticleField from './components/ParticleField'
-import LiquidBackground from './components/LiquidBackground'
-import CustomCursor from './components/CustomCursor'
 import CommandPalette from './components/CommandPalette'
 import WaveDivider from './components/WaveDivider'
 import Inbox from './components/Inbox'
@@ -24,18 +21,7 @@ import CurrentlyBuilding from './components/CurrentlyBuilding'
 import { useTheme } from './context/ThemeContext'
 
 function ThemedBackground() {
-  const { theme } = useTheme()
-  const [isTouch, setIsTouch] = useState(false)
-  useEffect(() => {
-    setIsTouch('ontouchstart' in window || navigator.maxTouchPoints > 0)
-  }, [])
-  if (theme !== 'dark') return null
-  if (isTouch) return null
-  return (
-    <div className="fixed inset-0 z-0">
-      <ParticleField />
-    </div>
-  )
+  return null
 }
 
 function ThemeEventBridge() {
@@ -71,18 +57,18 @@ function App() {
 
   if (loading) {
     return (
-      <div className="fixed inset-0 bg-[#0a0a23] flex items-center justify-center z-50">
+      <div className="fixed inset-0 bg-[#020617] flex items-center justify-center z-50">
         <div className="text-center max-w-xs">
           <div className="relative w-20 h-20 mx-auto mb-8">
-            <div className="absolute inset-0 rounded-full border-2 border-[#00d4ff]/20" />
+            <div className="absolute inset-0 rounded-full border-2 border-emerald-400/20" />
             <div
-              className="absolute inset-0 rounded-full border-2 border-transparent border-t-[#00d4ff] border-r-[#7a5cff]"
+              className="absolute inset-0 rounded-full border-2 border-transparent border-t-emerald-400 border-r-teal-400"
               style={{
                 transform: `rotate(${progress * 3.6}deg)`,
                 transition: 'transform 0.3s ease'
               }}
             />
-            <div className="absolute inset-2 rounded-full bg-gradient-to-br from-[#00d4ff]/10 to-[#7a5cff]/10 flex items-center justify-center">
+            <div className="absolute inset-2 rounded-full bg-gradient-to-br from-emerald-400/10 to-teal-400/10 flex items-center justify-center">
               <span className="text-xs font-mono text-gray-400">{Math.round(progress)}%</span>
             </div>
           </div>
@@ -90,7 +76,7 @@ function App() {
           <p className="text-gray-600 text-sm">Crafting experience...</p>
           <div className="mt-6 h-0.5 bg-white/5 rounded-full overflow-hidden">
             <div
-              className="h-full bg-gradient-to-r from-[#00d4ff] to-[#7a5cff] rounded-full transition-all duration-300 ease-out"
+              className="h-full bg-gradient-to-r from-emerald-400 to-teal-400 rounded-full transition-all duration-300 ease-out"
               style={{ width: `${progress}%` }}
             />
           </div>
@@ -108,8 +94,6 @@ function App() {
       }}
     >
       <ThemedBackground />
-      <LiquidBackground />
-      <CustomCursor />
       <ThemeEventBridge />
       <Navbar />
       <main className="relative z-10">

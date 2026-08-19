@@ -13,7 +13,7 @@ const experience = [
       'Worked on frontend development, debugging, testing, and deployment using React.js and JavaScript.',
     ],
     note: 'Letter of Recommendation available upon request',
-    color: '#00d4ff',
+    color: '#10b981',
     tags: ['Generative AI', 'React.js', 'LLM APIs', 'REST APIs'],
   },
 ]
@@ -31,7 +31,7 @@ export default function Experience() {
           className="text-center mb-4"
         >
           <span className="section-label">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#00d4ff]" />
+            <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
             Experience
           </span>
         </motion.div>
@@ -57,7 +57,7 @@ export default function Experience() {
             <div className="flex flex-wrap items-start justify-between gap-4 mb-5">
               <div>
                 <h3 className="text-xl font-bold text-white">{exp.role}</h3>
-                <p className="text-[#00d4ff] font-medium">{exp.company}</p>
+                <p className="text-emerald-400 font-medium">{exp.company}</p>
               </div>
               <span
                 className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-medium"
