@@ -28,13 +28,13 @@ const projects = [
     desc: 'Full-stack marketplace connecting artists with buyers, with AI-powered artwork recommendations via Gemini API.',
     longDesc:
       'A discovery-to-checkout platform with an AI concierge that understands buyer taste and surfaces relevant artworks.',
-    tech: ['React.js', 'Node.js', 'Firebase', 'Gemini API'],
+    tech: ['React.js', 'Next.js', 'Firebase', 'Gemini API', 'MongoDB'],
     link: 'https://www.kalaconnect.me/',
     gradient: 'from-emerald-600 to-teal-500',
     accent: '#34d399',
     problem: 'Independent artists struggle with discoverability on generic marketplaces; buyers cant find art that matches their taste.',
-    approach: 'Built a full-stack platform (React + Node + Firebase) with a Gemini-powered recommendation engine that ranks artworks by visual style and buyer interaction history.',
-    result: 'Shipped a working demo with AI recommendations, deployed on Vercel + Render, and validated the concept with 20+ artist sign-ups during user testing.',
+    approach: 'Built a full-stack platform (React + Next + Firebase + MongoDB) with a Gemini-powered recommendation engine that ranks artworks by visual style and buyer interaction history.',
+    result: 'Shipped a working demo with AI recommendations, deployed on Vercel, and validated the concept with 20+ artist sign-ups during user testing.',
     metrics: [
       { value: '20+', label: 'artist beta users' },
       { value: '4', label: 'core modules' },
