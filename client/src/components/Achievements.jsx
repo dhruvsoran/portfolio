@@ -3,6 +3,28 @@ import { motion } from 'framer-motion'
 
 const achievements = [
   {
+    icon: '🏆',
+    title: 'Hacktoberfest 2026 Winner',
+    org: 'DataSaathi',
+    desc: 'Won Hacktoberfest 2026 with the DataSaathi project.',
+    image: '/achievements/datasathi-hacktoberfest.svg',
+    imageAlt: 'DataSaathi, Hacktoberfest 2026 winner',
+    proof: null,
+    proofLabel: null,
+    color: '#f97316',
+  },
+  {
+    icon: '🥈',
+    title: 'Second Runner-Up — Lenovo LEAP Hackathon',
+    org: 'Prithv-E',
+    desc: 'Placed second runner-up in the Lenovo LEAP Hackathon with the Prithv-E project.',
+    image: '/achievements/prithv-e-lenovo-leap.svg',
+    imageAlt: 'Prithv-E, Lenovo LEAP Hackathon second runner-up',
+    proof: null,
+    proofLabel: null,
+    color: '#e2231a',
+  },
+  {
     icon: '🥉',
     title: '3rd Place — National Startup Pitch',
     org: 'IIMS Pune',
@@ -111,12 +133,21 @@ export default function Achievements() {
                 className={`card flex items-start gap-4 group ${item.proof ? 'cursor-pointer' : ''}`}
                 style={{ borderLeft: `3px solid ${item.color}40` }}
               >
-                <div
-                  className="w-12 h-12 rounded-xl flex items-center justify-center text-xl shrink-0 group-hover:scale-110 transition-transform duration-300"
-                  style={{ background: `${item.color}12`, border: `1px solid ${item.color}30` }}
-                >
-                  {item.icon}
-                </div>
+                {item.image ? (
+                  <img
+                    src={item.image}
+                    alt={item.imageAlt}
+                    className="w-24 h-20 rounded-lg object-cover shrink-0 border border-app"
+                    loading="lazy"
+                  />
+                ) : (
+                  <div
+                    className="w-12 h-12 rounded-xl flex items-center justify-center text-xl shrink-0 group-hover:scale-110 transition-transform duration-300"
+                    style={{ background: `${item.color}12`, border: `1px solid ${item.color}30` }}
+                  >
+                    {item.icon}
+                  </div>
+                )}
                 <div className="flex-1 min-w-0">
                   <h3 className="text-base font-bold text-app-strong leading-tight mb-0.5">
                     {item.title}

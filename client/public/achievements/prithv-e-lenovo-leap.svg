@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="320" viewBox="0 0 480 320" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="40" y1="20" x2="440" y2="300" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#25191A"/>
+      <stop offset="1" stop-color="#111416"/>
+    </linearGradient>
+    <linearGradient id="award" x1="314" y1="65" x2="398" y2="190" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F87171"/>
+      <stop offset="1" stop-color="#E2231A"/>
+    </linearGradient>
+  </defs>
+  <rect width="480" height="320" rx="18" fill="url(#bg)"/>
+  <path d="M0 250h480v70H0z" fill="#1C2421"/>
+  <path d="M42 54h132M42 66h82" stroke="#80605A" stroke-width="2" opacity=".55"/>
+  <circle cx="354" cy="126" r="58" fill="url(#award)" opacity=".18"/>
+  <path d="m354 82 13 27 30 4-22 21 5 30-26-14-27 14 5-30-22-21 30-4 14-27Z" fill="url(#award)"/>
+  <path d="M340 170v35l14-8 14 8v-35" fill="#A91B17"/>
+  <path d="M72 207h74l12 15v28H60v-28l12-15Z" fill="#527F6C"/>
+  <path d="M82 220h54M90 229h38" stroke="#D1FAE5" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="80" cy="250" r="6" fill="#111416"/>
+  <circle cx="138" cy="250" r="6" fill="#111416"/>
+  <text x="48" y="129" fill="#FCA5A5" font-family="Arial, sans-serif" font-size="14" font-weight="700" letter-spacing="2">LENOVO LEAP HACKATHON</text>
+  <text x="48" y="168" fill="#F8FAFC" font-family="Arial, sans-serif" font-size="30" font-weight="700">Prithv-E</text>
+  <text x="48" y="286" fill="#E5E7EB" font-family="Arial, sans-serif" font-size="14" font-weight="700" letter-spacing="1.5">SECOND RUNNER-UP</text>
+</svg>

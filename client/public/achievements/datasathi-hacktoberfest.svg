@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="320" viewBox="0 0 480 320" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="32" y1="16" x2="448" y2="304" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#132A35"/>
+      <stop offset="1" stop-color="#101419"/>
+    </linearGradient>
+    <linearGradient id="glow" x1="320" y1="40" x2="420" y2="156" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F97316"/>
+      <stop offset="1" stop-color="#FBBF24"/>
+    </linearGradient>
+  </defs>
+  <rect width="480" height="320" rx="18" fill="url(#bg)"/>
+  <path d="M0 246 135 166l106 66 103-105 136 86v107H0z" fill="#18313A"/>
+  <path d="M48 54h154M48 68h92M374 226h54M400 204v44" stroke="#52717A" stroke-width="2" opacity=".55"/>
+  <circle cx="368" cy="92" r="42" fill="url(#glow)" opacity=".18"/>
+  <path d="m347 83 14 13-14 13M389 83l-14 13 14 13" stroke="#FDBA74" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M367 111h3" stroke="#FDBA74" stroke-width="5" stroke-linecap="round"/>
+  <path d="M68 204h44v42H68z" fill="#F97316"/>
+  <path d="M81 216h18M81 226h18M81 236h11" stroke="#171717" stroke-width="3" stroke-linecap="round"/>
+  <path d="m311 205 7 14 16 2-12 11 3 16-14-8-14 8 3-16-12-11 16-2 7-14Z" fill="#FBBF24"/>
+  <text x="48" y="139" fill="#FDBA74" font-family="Arial, sans-serif" font-size="14" font-weight="700" letter-spacing="2">HACKTOBERFEST 2026</text>
+  <text x="48" y="178" fill="#F8FAFC" font-family="Arial, sans-serif" font-size="30" font-weight="700">DataSaathi</text>
+  <text x="48" y="282" fill="#D1D5DB" font-family="Arial, sans-serif" font-size="14" font-weight="700" letter-spacing="2">WINNER</text>
+  <path d="M134 277h82" stroke="#F97316" stroke-width="3" stroke-linecap="round"/>
+</svg>
